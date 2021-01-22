@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Page 35-1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .pc-layout{
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        .border{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            height: 1px;
+            background-color: #f1f1f1;
+        }
+        .verticalBorder{
+            display: inline-block;
+            height: 20px;
+            border-left: 2px solid #f1f1f1;
+            margin-left: 10px;
+            margin-right: 10px;
+            vertical-align: middle;
+
+        }
+
+        .section1{
+            border: 2px solid #f1f1f1;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .row4{
+            grid-gap: 50px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: 200px 200px;
+            height: 60px;
+        }
+        #btn1, #btn2{
+            height: 40px;
+            border: 1px solid #f1f1f1;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        #btn1:focus, #btn2:focus{
+            outline: none;
+            border: none;
+        }
+        #btn1{
+            background-color: #1f47c7;
+            color: #ecedfa;
+        }
+        #btn2{
+            background-color: #f0f0f0;
+        }
+        .title-table{
+            display: grid;
+            grid-template-columns: 4% 8% 8% 21% 4% 8% 5% 8% 8% 8% 5% 5% 8%;
+            border: 1px solid #f1f1f1;
+            background-color: #e2e9ed;
+            color: #1f47c7;
+        }
+       .body-table{
+            display: grid;
+            grid-template-columns: 4% 8% 8% 21% 4% 8% 5% 8% 8% 8% 5% 5% 8%;
+            border: 1px solid #f1f1f1;
+            border-top: none;
+       }
+        .item{
+            display: grid;
+            padding: 2px;
+            justify-content: center;
+            align-content: center;
+            border-right: 1px solid #f1f1f1;
+            overflow: hidden;
+            font-size: 15px;
+        }
+        .item:nth-child(13){
+            border-right: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Page 35-1</h1>
+    <div class="pc-layout">
+        <div class="layoutPage35">
+            <div class="section1">
+                <!-- start row1 -->
+                <div class="row1">
+                    <!-- radio input -->
+                    <input type="radio" id="radioId1" name="radioName" value="radioValue1">
+                    <label for="radioId1"><strong>radioValue1</strong> </label>
+                    <div class="verticalBorder"></div>
+                    <input type="radio" id="radioId2" name="radioName" value="radioValue2">
+                    <label for="radioId2"><strong>radioValue2</strong></label>
+                    <!-- select option1 -->
+                    <select id="option1">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue3</option>
+                    </select>
+                    <!-- select option2 -->
+                    <select id="option2">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue3</option>
+                    </select>    
+                    <!-- select option3 -->
+                    <select id="option3">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue3</option>
+                    </select>               
+                </div>
+                <div class="border"></div>
+                <!-- end row1 -->
+                <!-- start row 2 -->
+                <div class="row2">
+                    <!-- start left row2 -->
+                    <label for="valueInput1"><strong>inputValue1</strong></label>
+                    <input type="text" id="inputId1" name="inputName1">
+                    <!-- end left row2 -->
+                    <div class="verticalBorder"></div>
+                    <!-- start right row2 -->
+                    <label for="valueInput2"><strong>inputValue2</strong></label>
+                    <input type="text" id="inputId2" name="inputName2">
+                    <label for="valueInput2-1">%</label>
+                    <input type="text" id="inputId3" name="inputName3">
+                    <label for="valueInput2-2">%</label>
+
+                    
+                    <!-- end left row2 -->
+                </div>
+                <!-- end row 2 -->
+                <div class="border"></div>
+                <!-- start row 3 -->
+                <div class="row3">
+                    <label for="option4"><strong>Option4:</strong></label>
+                    <select id="option4">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue4</option>
+                    </select> 
+                    <div class="verticalBorder"></div>
+
+                    <label for="option5"><strong>Option5:</strong></label>
+                    <select id="option5">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue4</option>
+                    </select> 
+                    <div class="verticalBorder"></div>
+
+                    <label for="option6"><strong>Option6:</strong></label>
+                    <select id="option6">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue4</option>
+                    </select> 
+                    <div class="verticalBorder"></div>
+                    <label for="option7"><strong>Option7:</strong></label>
+                    <select id="option7">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue4</option>
+                    </select> 
+                    <div class="verticalBorder"></div>
+                    <label for="option8"><strong>Option8:</strong></label>
+                    <select id="option8">
+                        <option value="optionValue1">optionValue1</option>
+                        <option value="optionValue2">optionValue2</option>
+                        <option value="optionValue3">optionValue3</option>
+                        <option value="optionValue4" selected>optionValue4</option>
+                    </select> 
+                    <div class="verticalBorder"></div>
+
+                </div>
+                <!-- end row 3 -->
+                <div class="border"></div>
+                <!-- start row 4 -->
+                <div class="row4">
+                    <button id="btn1">Button 1</button>
+                    
+                    <button id="btn2">Button 2</button>
+
+                </div>
+
+                <!-- start row 4 -->
+            </div>
+            <!-- end section 1 -->
+
+            <!-- start section 2 -->
+            <div class="section2">
+                <!-- start table -->
+                <div class="title-table">
+                    <div class="item item1">Title1  </div>
+                    <div class="item item2">Title2</div>
+                    <div class="item item3">Title3</div>
+                    <div class="item item4">Title4</div>
+                    <div class="item item5">Title5</div>
+                    <div class="item item6">Title6</div>
+                    <div class="item item7">Title7</div>
+                    <div class="item item8">Title8</div>
+                    <div class="item item9">Title9</div>
+                    <div class="item item10">Title10</div>
+                    <div class="item item11">Title11</div>
+                    <div class="item item12">Title12</div>
+                    <div class="item item13">Title13</div>
+                </div>
+
+                <div class="body-table">
+                    <div class="item item14">Content 14</div>
+                    <div class="item item15">Content 15</div>
+                    <div class="item item16">Content 16</div>
+                    <div class="item item17">Content 17</div>
+                    <div class="item item18">Content 18</div>
+                    <div class="item item19">Content 19</div>
+                    <div class="item item20">Content 20</div>
+                    <div class="item item21">Content 21</div>
+                    <div class="item item22">Content 22</div>
+                    <div class="item item23">Content 23</div>
+                    <div class="item item24">Content 24</div>
+                    <div class="item item25">Content 25</div>
+                    <div class="item item26">Content 26</div>
+                </div>
+                <div class="body-table">
+                    <div class="item item27">Content 27</div>
+                    <div class="item item28">Content 28</div>
+                    <div class="item item29">Content 29</div>
+                    <div class="item item30">Content 30</div>    
+                    <div class="item item31">Content 31</div>
+                    <div class="item item32">Content 32</div>
+                    <div class="item item33">Content 33</div>
+                    <div class="item item34">Content 34</div>
+                    <div class="item item35">Content 35</div>
+                    <div class="item item36">Content 36</div>
+                    <div class="item item37">Content 37</div>
+                    <div class="item item38">Content 38</div>
+                    <div class="item item39">Content 39</div>
+                </div>
+                <!-- end table -->
+            </div>
+            <!-- end section 2 -->
+        </div>
+    </div>
+
+</body>
+</html>

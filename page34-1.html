@@ -5,10 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Page 34 - 1</title>
     <style>
-        
+         *{
+            padding: 0;
+            margin: 0;
+        }
+        .pc-layout{
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        .title-table{
+            display: grid;
+            grid-template-columns: 12.5% 33.75% 35% 18.75%;
+            border: 1px solid #f1f1f1;
+            background-color: #e2e9ed;
+            color: #1f47c7;
+        }
+       .body-table{
+            display: grid;
+            grid-template-columns: 12.5% 33.75% 35% 18.75%;
+            border: 1px solid #f1f1f1;
+            border-top: none;
+       }
+       .item{
+            display: grid;
+            padding: 2px;
+            justify-content: center;
+            align-content: center;
+            border-right: 1px solid #f1f1f1;
+        }
+        .item1, .item2, .item3, .item4{
+            color: #1287a8;
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
-    
+    <h1>1일 1회 훈련생 본인인증이력 조희  </h1>
+    <h2>확인사항</h2>
+    <div class="pc-layout">
+        <div class="layoutPage34-1">
+            <div class="title-table">
+                <div class="item item1">Title1</div>
+                <div class="item item2">Title2</div>
+                <div class="item item3">Title3</div>
+                <div class="item item4">Title4</div>
+            </div>
+            <div class="body-table">
+                <div class="item item5">Content5</div>
+                <div class="item item6">Content6</div>
+                <div class="item item7">Content7</div>
+                <div class="item item8">Content8</div>
+            </div>
+
+            <div class="body-table">
+                <div class="item item9">Content9</div>
+                <div class="item item10">Content10</div>
+                <div class="item item11">Content11</div>
+                <div class="item item12">Content12</div>
+            </div>
+
+            
+        </div>
+    </div>
 </body>
 </html>
