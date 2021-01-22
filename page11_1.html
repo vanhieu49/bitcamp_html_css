@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout Page 11 - 1</title>
     <style>
-        
+      .formGrid {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        border-top: 1px solid black;
+      }
+      .leftForm {
+        text-align: left;
+        padding: 5%;
+        background-color: rgb(207, 201, 201);
+      }
+      .rightForm {
+        padding: 5%;
+      }
+      .rightForm input {
+        width: 100%;
+        height: 50%;
+        margin-top: 10px;
+      }
+      .formGrid:last-child {
+        border-bottom: 1px solid black;
+      }
+      h6 {
+        font-size: 14px;
+        color: rgb(17, 106, 179);
+      }
+      p {
+        color: red;
+        margin-top: 9%;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form>
+      <!-- one row form -->
+      <div class="formGrid">
+        <div class="leftForm">
+          <label> <h6>Email</h6></label>
+        </div>
+        <div class="rightForm">
+          <input type="text" />
+        </div>
+        <div><p></p></div>
+      </div>
+      <!-- two row form -->
+      <div class="formGrid">
+        <div class="leftForm">
+          <label> <h6>Password</h6></label>
+        </div>
+        <div class="rightForm">
+          <input type="password" />
+        </div>
+        <div>
+          <p>Error</p>
+        </div>
+      </div>
+      <!-- three row form -->
+      <div class="formGrid">
+        <div class="leftForm">
+          <label> <h6>infor</h6></label>
+        </div>
+        <div class="rightForm">
+          <input type="text" />
+        </div>
+        <div>
+          <p>Normal</p>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>

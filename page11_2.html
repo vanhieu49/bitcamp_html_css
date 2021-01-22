@@ -1,14 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout Page 11 - 2</title>
     <style>
+      .container {
+        width: 95%;
+        margin: 0 auto;
+      }
+      .tabHeader {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+      }
+      .tabHeader__left,
+      .tabHeader__center,
+      .tabHeader__right {
+        text-align: center;
+        border: 1px solid rgb(202, 198, 198);
+        border-bottom: 2px solid rgb(117, 114, 114);
+      }
+      .tabHeader__left {
+        border: 2px solid rgb(117, 114, 114);
+        border-bottom-style: hidden;
+      }
+      .container .tabTitle {
+        margin-left: 45%;
+        height: 50%;
+        width: 70%;
+        margin-bottom:7%;
+      }
+      .tabTitle h5 {
+        font-size: 16px;
         
+      }
+      .tabTitle span {
+        border: 3px solid black;
+        border-radius: 10px;
+        height: 50%;
+        margin-left: 10%;
+      }
+      .formTab{
+          display: grid;
+          grid-template-columns: 20% 80%;
+          grid-gap: 10px;
+      }
+      .formTab .formTab__left span{
+          color: red;
+      }
+      .formTab .formTab__left{
+          background-color: rgb(151, 146, 146);
+      }
+      .formTab .formTab__left p{
+          margin-left: 10px;
+      }
+      .formTab{
+          border-top: 2px solid rgb(135, 135, 139);
+      }
+      .formTab.first{
+         border-top: 3px solid rgb(18, 7, 180);
+      }
+      .formTab .formTab__right {
+          padding-top: 8px;
+      }
+      .formTab .formTab__right input {
+         width: 47%;
+         height: 65%;
+      }
+      .formTab .formTab__right span {
+        background-color: black;
+        color: white;
+        padding: 2px 5px;
+      }
+      .flexRight{
+          display: flex;;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <!-- tab header -->
+      <div class="tabHeader">
+        <div class="tabHeader__left">
+          <h6>Tab 1</h6>
+        </div>
+        <div class="tabHeader__center">
+          <h6>Tab 2</h6>
+        </div>
+        <div class="tabHeader__right">
+          <h6>Tab 3</h6>
+        </div>
+      </div>
+
+      <!-- title -->
+      <div class="tabTitle">
+        <h5>Welcome Tab Bitcamp</h5>
+        <span></span>
+      </div>
+
+      <!-- form tab -->
+      <form>
+        <label><strong>Form Tab</strong></label>
+        <div class="formTab first">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 1</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>Value row 1</p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 2</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>Value row 2</p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 3</strong></p>
+            </div>
+            <div class="formTab__right">
+                <input type="text">
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 1</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>Value row 1</p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 4</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>Value row 4</p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 5</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>08043593593</p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 5</strong></p>
+            </div>
+            <div class="formTab__right">
+                <p><p>010204-34344-4353 <span>note data</span> </p></p>
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 6</strong></p>
+            </div>
+            <div class="formTab__right">
+                <input type="text" placeholder="bitcamp@gmail.com">
+            </div>
+        </div>
+        <div class="formTab">
+            <div class="formTab__left">
+                <p><strong><span>*</span> Row 7</strong></p>
+            </div>
+            <div class="formTab__right">
+               <div class="flexRight">
+                <input type="radio" id="one" name="gender" value="male"><span>nothing</span> </input>
+                <input type="radio" id="one" name="gender" value="male"><span>nothing</span> </input>
+               </div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

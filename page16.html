@@ -1,14 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout Page 16</title>
     <style>
-        
+      .container {
+        width: 95%;
+        border: 1px solid black;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      /* header */
+      .headerBox {
+        width: 99%;
+        margin: 5px auto;
+        box-shadow: 2px 0px rgb(211, 208, 208);
+      }
+      /* header title */
+      .headerBox .headerBox__title {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        width: 95%;
+        margin: 0px auto;
+        border: 1px solid rgb(172, 169, 169);
+      }
+      .headerBox .headerBox__title .headerBox__title__col {
+        text-align: center;
+        height: 1%;
+      }
+      .headerBox .headerBox__title .headerBox__title__col span {
+        color: blue;
+      }
+      /* header about */
+      .headerBox .headerAbout {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        width: 95%;
+        margin: 10px auto;
+        background-color: rgb(170, 170, 177);
+        box-sizing: border-box;
+      }
+
+      .headerBox .headerAbout .headerAbout__col ul {
+        list-style-type: none;
+      }
+      .dotBlue {
+        color: blue;
+        font-size: 35px;
+      }
+      .borderLeft {
+        border-left: 3px solid rgb(189, 185, 185);
+        border-radius: 5px;
+        margin-right: 5px;
+      }
+      .spaceLeft {
+        margin-right: 10px;
+      }
+      /* header detail */
+      .headerBox .headerDetail {
+        display: grid;
+        grid-template-columns: 10% 40% 10% 40%;
+        width: 95%;
+        margin: 0 auto;
+        border-bottom: 1px dotted rgb(204, 203, 201);
+      }
+      /* button controller */
+      .headerBox .headerButton {
+        display: flex;
+        width: 95%;
+      }
+      .headerBox .headerButton .headerButton__button {
+        margin: 20px auto;
+      }
+      .headerBox .headerButton .headerButton__button button {
+        padding: 10px 30px;
+        outline: none;
+        border: none;
+        box-shadow: 1px 1px 2px blue;
+      }
+      .headerBox .headerButton .headerButton__button button:first-child {
+        margin-right: -4px;
+        border-right: none;
+      }
+      .active {
+        background-color: blue;
+        color: white;
+      }
+      /* content box */
+      .contentBox {
+        padding-left: 10px;
+      }
+      /* public hr */
+      hr {
+        border: 2px solid rgb(128, 125, 125);
+        margin-bottom: -18px;
+      }
+      .contentBox .contentBox__row span {
+        color: blue;
+      }
+      .contentShadow {
+        box-shadow: -1px 2px black;
+      }
+      .contentShadow li p {
+        padding: 8px 0;
+      }
+      .contentShadow.lastContent {
+        box-shadow: -1px 0 black;
+      }
+      /* content box three */
+      .contentGrid {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        text-align: center;
+        margin-top: 19px;
+      }
+      .contentGrid:last-child {
+        margin-top: 1px;
+      }
+      .contentGrid .contentGrid__col {
+        padding-top: 10%;
+        background-color: rgb(146, 163, 236);
+      }
+      .contentGrid .contentGrid__child {
+        display: grid;
+        grid-template-columns: 20% 80%;
+       
+      }
+      
+      .contentGrid .contentGrid__child .contentGrid__child__col {
+        background-color: rgb(136, 126, 126);
+        border-bottom: 2px solid rgb(150, 143, 143);
+      }
+
+      .contentGrid .contentGrid__child .contentGrid__child__col.leftChild {
+        text-align: left;
+        padding-left: 10px;
+        background-color: white;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header box  -->
+      <div class="headerBox">
+        <!-- text -->
+        <div class="headerBox__title">
+          <div class="headerBox__title__col">
+            <p>Price One</p>
+          </div>
+          <div class="headerBox__title__col">
+            <p>Price Two</p>
+          </div>
+          <div class="headerBox__title__col">
+            <p>Price Three</p>
+          </div>
+          <div class="headerBox__title__col">
+            <p>Price Four</p>
+          </div>
+        </div>
+        <!-- number -->
+        <div class="headerBox__title">
+          <div class="headerBox__title__col">
+            <p><span>50.0000</span></p>
+          </div>
+          <div class="headerBox__title__col">
+            <p><span>50.0000</span></p>
+          </div>
+          <div class="headerBox__title__col">
+            <p><span>50.0000</span></p>
+          </div>
+          <div class="headerBox__title__col">
+            <p><span>50.0000</span></p>
+          </div>
+        </div>
+        <!-- about -->
+        <div class="headerAbout">
+          <div class="headerAbout__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerAbout__col">
+            <ul>
+              <li><span class="borderLeft"></span> 1. line one</li>
+              <li><span class="spaceLeft"></span>2. line two</li>
+              <li><span class="spaceLeft"></span>3.line three</li>
+            </ul>
+          </div>
+        </div>
+        <!-- detail -->
+        <!-- detail row -->
+        <div class="headerDetail">
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+        </div>
+        <div class="headerDetail">
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+        </div>
+        <div class="headerDetail">
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="dotBlue">.</span>Title About</p>
+          </div>
+          <div class="headerDetail__col">
+            <p><span class="borderLeft"></span>Title About</p>
+          </div>
+        </div>
+        <!-- button controller -->
+        <div class="headerButton">
+          <div class="headerButton__button">
+            <button class="active">Ok let go</button>
+            <button>Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- content box -->
+      <div class="contentBox">
+        <!-- one -->
+        <div class="contentBox__row">
+          <h6><span>icon</span> Content Box one</h6>
+          <hr />
+          <ol class="contentShadow">
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+                and view the result, In this HTML tutorial, you will find more
+                than 200 examples. With our online "Try it Yourself" editor, you
+                can edit and test each example yourself!
+              </p>
+            </li>
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+                and view the result, In this HTML tutorial, you will find more
+                than 200 examples. With our online "Try it Yourself" editor, you
+                can edit and test each example yourself!
+              </p>
+            </li>
+          </ol>
+        </div>
+        <!-- two -->
+        <div class="contentBox__row">
+          <h6><span>icon</span> Content Box two</h6>
+          <hr />
+          <ol class="contentShadow">
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+              </p>
+            </li>
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+              </p>
+            </li>
+          </ol>
+        </div>
+        <!-- three -->
+        <div class="contentBox__row">
+          <h6><span>icon</span> Content Box three</h6>
+          <hr />
+          <div class="contentGrid">
+            <div class="contentGrid__col">item 1</div>
+            <div class="contentGrid__child">
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+            </div>
+          </div>
+          <div class="contentGrid">
+            <div class="contentGrid__col">item 1</div>
+            <div class="contentGrid__child">
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+
+              <div class="contentGrid__child__col">item 1</div>
+              <div class="contentGrid__child__col leftChild">item 1</div>
+            </div>
+          </div>
+        </div>
+        <!-- four -->
+        <div class="contentBox__row">
+          <h6><span>icon</span> Content Box four</h6>
+          <hr />
+          <ol class="contentShadow lastContent">
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+              </p>
+            </li>
+            <li>
+              <p>
+                With our "Try it Yourself" editor, you can edit the HTML code
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
