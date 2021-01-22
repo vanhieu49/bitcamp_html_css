@@ -184,11 +184,11 @@
 		}
 		.filter>.items:nth-child(2) .item-container {
 			display: grid;
-			grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+			grid-template-columns: 14% 15% 14% 14% 14% 14% 14%;
 		}
 		.filter>.items:nth-child(2) .item-container:nth-child(6) {
 			display: grid;
-			grid-template-columns: 1fr 1fr 5fr;
+			grid-template-columns: 14% 15% 71%;
 		}
 		.filter>.items:nth-child(2) .item-container .item:nth-child(2) {
 			text-align: center;
@@ -226,7 +226,7 @@
 		}
 		.result .items {
 			display: grid;
-			grid-template-columns: 2em 5fr 5fr 2fr 2fr 2fr 2fr 5em 5em 5em 2em 2em;
+			grid-template-columns: 5% 12% 12% 11% 10% 8% 8% 8% 8% 8% 5% 5%;
 			text-align: center;
     	}
 		.result .items .item-container {
@@ -234,6 +234,7 @@
 			grid-template-columns: repeat(auto-fit, minmax(var(--column-width-min), 1fr));
 		}
 		.result .items .item {
+			display: grid;
 			border-right: 1px solid var(--xamdam);
 			border-bottom: 1px solid var(--xamdam);
 			padding: 2px;
@@ -245,7 +246,7 @@
 			background-color: var(--xamvua);
 		}
 		.result>.items:first-child .item {
-			display: flex;
+			/* display: flex; */
 			align-items: center;
 			justify-content: center;
 			text-overflow: initial;
@@ -498,8 +499,8 @@
 								<div class="item">Title 7</div>
 								<div class="item">Title 8</div>
 								<div class="item">Title 9</div>
-								<div class="item"><input type="checkbox"/></div>
-								<div class="item"><input type="checkbox"/></div>
+								<div class="item"><p><input type="checkbox"/></p><p>(ds)</p></div>
+								<div class="item"><p><input type="checkbox"/></p><p>(ds)</p></div>
 							  </li>
 							  <li class="items">
 								<div class="item">1</div>
