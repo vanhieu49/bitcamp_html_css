@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <style>
+        :root{
+			--blue:#313bc5;
+			--bluenhac:#4f82dc;
+			--blued4:#4c96da;
+			--bluen4:#fbfbfd;
+			--hongn4:#6ebbda;
+			--xamnhac:#f4f4f4;
+			--xamvua:#f8f8f8;
+			--xamdam:#ddd;
+			--white:#fff;
+			--green: #4CAF50;
+			--black:#333;
+		}
+
+        /*reset CSS------------------------------------------------------------------*/
+		* {
+			box-sizing: border-box;
+		}
+		body,h1,h2,h3,h4,p{
+			margin: 0;
+			padding: 0;
+		}
+		li,ol,ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+        /*  */
+        #page4{
+			width: 100%;
+			height: 100%;
+		}
+        #page4 .pc-layout{
+			margin: 0 auto;
+		}
+
+		/* page4 div1 */
+		#page4 .pc-layout .div1{
+			width: 50%;
+			padding: 10px;
+		}
+
+		/* page4 div2 */
+		#page4 .pc-layout .div2{
+			width: 100%;
+		}
+		.div2 .items{
+			display: grid;
+			padding: 0;
+		}
+		
+		.div2 .items .item:nth-child(1), .item:nth-child(3){
+			background-color: var(--bluen4);
+		}
+
+		/* icon */
+		.item-icon{
+			align-self: center;
+			justify-self: center;
+			padding: 25px;
+			border-radius: 50%;
+		}
+		.item-icon.bgcon1{
+			background-color: var(--blued4);
+		}
+		.item-icon.bgcon2{
+			background-color: var(--hongn4);
+		}
+		.fas{ 
+			color: var(--white);
+			font-size: xx-large;
+		}
+		/* title-color */
+		.title-color1{
+			color: var(--blued4);
+		}
+		.title-color2{
+			color: var(--hongn4);
+		}
+		/* Resposive ----------------------------------*/
+		@media only screen and (min-width: 360px) {
+		/* For mobile */
+				#page4 .pc-layout .div1{
+					width: 100%;
+				}
+				.div2 .items .item{
+					display: grid;
+					padding: 10px 0;
+					list-style: none;
+				}
+				.div2 .items .item .div-item-content{
+					display: grid;
+					padding: 10px 0;
+				}
+				.div2 .items .item .div-item-content div:nth-child(2){
+					text-align: center;
+				}
+		}
+		@media only screen and (min-width: 600px) {
+		/* For tablets: */
+				#page4 .pc-layout .div1{
+					width: 100%;
+				}
+				.div2 .items .item{
+					display: grid;
+					/* grid-template-columns: 50% 50%; */
+					padding: 10px 0;
+					list-style: none;
+				}
+				.div2 .items .item .div-item-content{
+					display: grid;
+					grid-template-columns: 20% 80%;
+					padding: 10px 0;
+				}
+				.div2 .items .item .div-item-content div:nth-child(2){
+					text-align: left;
+				}
+		}
+		@media only screen and (min-width: 995px) {
+		/* For desktop: */
+			#page4 .pc-layout .div1{
+				width: 50%;
+			}
+			.div2 .items .item{
+				display: grid;
+				grid-template-columns: 50% 50%;
+				padding: 10px 0;
+				list-style: none;
+			}
+			.div2 .items .item .div-item-content{
+				display: grid;
+				grid-template-columns: 20% 80%;
+			}
+			.div2 .items .item .div-item-content div:nth-child(2){
+					text-align: left;
+			}
+		}
+    </style>
+</head>
+<body>
+    <section id="page4">
+        <div class="pc-layout">
+            <div class="div1">
+                <h3>The standard Lorem Ipsum passage</h3>
+                <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                    3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+            </div>
+            <div class="div2">
+               <ul class="items">
+               	<li class="item">
+               		<div class="div-item-content">
+						<div class="item-icon bgcon1">
+							<i class="fas fa-key"></i>
+						</div>
+						<div>
+							<h3 class="title-color1">The standard Lorem Ipsum passage</h3>
+							<p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+								2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+								3. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							</p>
+							<!-- <ol>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							</ol> -->
+						</div>
+					</div>
+					<div class="div-item-content">
+						<div class="item-icon bgcon1">
+							<i class="fas fa-bookmark"></i>
+						</div>
+						<div>
+							<h3 class="title-color1">The standard Lorem Ipsum passage</h3>
+							<p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+								2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+								3. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							</p>
+						</div>
+					</div>
+               	</li>
+               	<li class="item">
+					<div class="div-item-content">
+					 <div class="item-icon bgcon2">
+						 <i class="fas fa-shield-alt"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color2">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						 </p>
+					 </div>
+				 </div>
+				 <div class="div-item-content">
+					 <div class="item-icon bgcon2">
+						<i class="fas fa-calculator"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color2">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						 </p>
+					 </div>
+				 </div>
+				</li><li class="item">
+					<div class="div-item-content">
+					 <div class="item-icon bgcon1">
+						<i class="fas fa-graduation-cap"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color1">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+							2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+							3. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+						</p>
+					 </div>
+				 </div>
+				 <div class="div-item-content">
+					 <div class="item-icon bgcon1">
+						<i class="fas fa-calendar-check"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color1">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+							2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+							3. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+						</p>
+					 </div>
+				 </div>
+				</li><li class="item">
+					<div class="div-item-content">
+					 <div class="item-icon bgcon2">
+						 <i class="fas fa-file-signature"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color2">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						 </p>
+					 </div>
+				 </div>
+				 <div class="div-item-content">
+					 <div class="item-icon bgcon2">
+						 <i class="fas fa-file-signature"></i>
+					 </div>
+					 <div>
+						 <h3 class="title-color2">The standard Lorem Ipsum passage</h3>
+						 <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+							 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						 </p>
+					 </div>
+				 </div>
+				</li>
+               </ul>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>

@@ -5,10 +5,428 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Page 31 - 1</title>
     <style>
-        
+		:root{
+			--blue:#313bc5;
+			--bluenhac:#4f82dc;
+			--xamnhac:#f4f4f4;
+			--xamvua:#f8f8f8;
+			--xamdam:#ddd;
+			--white:#ffffff;
+			
+		}
+/*reset CSS-------------------------------------------*/
+		* {
+			box-sizing: border-box;
+		}
+		body,h1,h2,h3,h4,ul,li,p{
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+/*header---------------------------------------------------*/
+		.wapper{
+			width: 100%;
+			height: 100%;
+		}
+		.wapper .header{
+			height: 5vh;
+			overflow: hidden;
+		}
+		.wapper .header .bar{
+			background-color: var(--blue);
+		}
+		.wapper .header .bar ul{
+			list-style: none;
+			margin: 0px 0px 0px 20px;
+		}
+		.wapper .header .bar ul li{
+			display: inline-block;
+			padding: 10px
+		}
+		.wapper .header .bar ul li a:hover{
+			color: var(--bluenhac);
+		}
+		.wapper .header .bar ul li a{
+			color: var(--white);
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 0 5px;
+			border-left: 1px solid var(--white);
+		}
+		.wapper .header .bar ul li a:last-child{
+			border-right: 1px solid var(--white);
+		}
+/*main*/
+		.wapper .main{
+			height: 95vh;
+			overflow: hidden;
+		}
+		.wapper .main .main-content{
+			display: grid;
+			grid-template-columns: 20% 80%;
+			height: 100%;
+		}
+/*main left-----------------------------------------------------*/
+		.main-content .div-left{
+			border-right: 5px solid var(--xamdam);
+			background-color: var(--xamvua);
+		}
+		.main-content .div-left .left-content{
+			padding: 10px 5px 5px;
+		}
+		.div-left .left-content ul{
+			margin: 0px 0px 0px 2px; 
+			list-style: none; 
+			line-height: 2em; 
+			padding-inline-start: 20px;
+		}
+		.div-left .left-content ul li{
+			font-size: 16px;
+			position: relative;
+		}
+		.div-left .left-content ul li::before{
+			position: absolute;
+			left: -15px;
+			top: 0px;
+			content: '';
+			display: block;
+			border-left: 1px solid #ddd;
+			height: 1em;
+			border-bottom: 1px solid #ddd;
+			width: 10px;
+		}
+
+		.div-left .left-content ul li::after{
+			position: absolute;
+			left: -15px;
+			bottom: -7px;
+			content: '';
+			display: block;
+			border-left: 1px solid #ddd;
+			height: 100%;
+		}
+
+		.div-left .left-content ul .root{
+			margin: 0px 0px 0px -20px;
+		}
+		.div-left .left-content ul .root::before{
+			display: none;
+		}
+
+		.div-left .left-content ul .root::after{
+			display: none;
+		}
+		.div-left .left-content ul li:last-child::after{
+			display: none 
+		}
+		
+/*main right content----------------------------------------------------*/
+		.main-content .div-right{}
+		.main-content .div-right .right-content{
+			padding: 5px 5px 5px;
+		}
+/*main right content nav-bar ----------------------------------------------------*/
+		.right-content .nav-bar{
+			display: grid;
+    		grid-template-columns: 50% 50%;
+			padding: 5px 5px 10px 5px;
+		}
+		.right-content .nav-bar h3{
+			display: inline-block;
+		}
+		.right-content .nav-bar ul{
+			display: inline-block;
+			margin: 0;
+			text-align: end
+		}
+		.right-content .nav-bar ul li{
+			display: inline-block;
+		} 
+		
+/*main right content div-filter ----------------------------------------------------*/
+		.right-content .div-filter{}
+		.div-filter .filter {
+			display: grid;
+			grid-template-columns: 2fr 8fr;
+			border-top: 1px solid var(--xamdam);
+		}
+		.filter:nth-child(2) {
+			margin-top: 5px;
+		}
+		.filter .items{
+			display: grid;
+		}
+		.filter .items .item {
+			border-right: 1px solid var(--xamdam);
+			border-bottom: 1px solid var(--xamdam);
+			padding: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		/* .div-filter .filter li .item-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(var(--column-width-min), 1fr));
+		} */
+		.filter>.items:first-child {
+			background-color: var(--xamvua);
+		}
+		.filter>.items:first-child .item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-overflow: initial;
+			overflow: auto;
+			white-space: normal;
+			border-left: 1px solid var(--xamdam);
+		}
+		.filter>.items:nth-child(2) .item-container {
+			display: grid;
+			grid-template-columns: 3fr 2fr 3fr;
+		}
+		.filter>.items:nth-child(2) .item-container .item:nth-child(2) {
+			text-align: center;
+			background-color: var(--xamvua);
+		}
+		.filter .items .item ul{}
+		.filter .items .item ul li{
+			display: inline-block
+		}
+		
+/*main right content div-result ----------------------------------------------------*/
+		.right-content .div-result{
+			margin-top: 10px;
+		}
+		.div-result .result {
+			margin-top: 10px;
+			border-left: 1px solid var(--xamdam);
+			border-top: 1px solid var(--xamdam);
+		}
+		.result .items{
+			display: grid;
+			grid-template-columns: 5% 5fr 5fr 2fr 2fr 2fr 2fr 7% 7% 7%;
+			text-align: center;
+    	}
+		.result .items:hover{
+			background-color: #4CAF50;
+    	}
+
+		/* title result */
+		.result>.items:first-child {
+			background-color: var(--xamvua);
+		}
+		.result>.items:first-child .item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-overflow: initial;
+			overflow: auto;
+			white-space: normal;
+		}
+		.result .items .item {
+			border-right: 1px solid var(--xamdam);
+			border-bottom: 1px solid var(--xamdam);
+			padding: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		/* .result li .item-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(var(--column-width-min), 1fr));
+		} */
+		
+
+/*main right content pagination---------------- */
+		.pagination {
+		  margin-top: 10px;
+		  display: flex;
+		  justify-content: center;
+		}
+		.pagination a {
+		  color: black;
+		  float: left;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+		.pagination a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		.pagination a:hover:not(.active) {
+			background-color: #ddd;
+		}
     </style>
 </head>
 <body>
-    
+    <div class="wapper">
+		<div class="header">
+			<div class="bar">
+				<ul>
+					<li><a href="#">Tab 1</a></li>
+					<li><a href="#">Tab 2</a></li>
+					<li><a href="#">Tab 3</a></li>
+					<li><a href="#">Tab 4</a></li>
+					<li><a href="#">Tab 5</a></li>
+					<li><a href="#">Tab 6</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-content">
+				<div class="div-left">
+					<div class="left-content">
+						<h4>Computer</h4>
+						<ul>
+						  <li class="root">Root</li>
+						  <li>Lorem ipsum
+							<ul>
+						  		<li>Adipiscing elit.</li>
+						  		<li>Tincidunt mauris eu risus.</li>
+						  		<li>Vestibulum </li>
+							</ul>  
+						  </li>
+						  <li>Aliquam</li>
+						  <li>
+							Dapibus
+							<ul>
+							  <li>Aliquam tincidunt mauris eu risus.</li>
+							  <li>Vestibulum auctor dapibus neque.</li>
+							</ul>  
+						  </li>
+						</ul>  
+					</div>
+				</div>
+				<div class="div-right">
+					<div class="right-content">
+						<div class="nav-bar">
+							<h3>SMS</h3>
+							<ul>
+								<li>Icon</li>
+								<li>Icon</li>
+								<li>Icon</li>
+							</ul>
+						</div>
+						<div class="div-filter">
+							<ul class="filter">
+							  <li class="items">
+								<div class="item">Title 1</div>
+								<div class="item">Title 2</div>
+							  </li>
+							  <li class="items">
+								<div class="item">
+									<select id="select1" name="cars">
+									  <option value="volvo">Select 1</option>
+									  <option value="saab">Saab</option>
+									  <option value="fiat">Fiat</option>
+									  <option value="audi">Audi</option>
+									</select>
+								</div>
+								<div class="item-container">
+									<div class="item">
+										<select id="select2" name="car">
+										  <option value="volvo">Select 2</option>
+										  <option value="saab">Saab</option>
+										  <option value="fiat">Fiat</option>
+										  <option value="audi">Audi</option>
+										</select>
+									</div>
+									<div class="item">Title 2.1</div>
+									<div class="item">
+										<input/>
+										<button>Search</button>
+									</div> 
+								</div>
+							  </li>
+							</ul>
+							
+							<ul class="filter">
+							  <li class="items">
+								<div class="item">Title 1</div>
+								<div class="item">Title 2</div>
+								<div class="item">Title 3</div>
+								<div class="item">Title 4</div>
+							  </li>
+							  <li class="items">
+								<div class="item">
+									<input type="text">
+								</div>
+								<div class="item">
+									<select id="select3" name="car">
+										<option value="volvo">Select 3</option>
+										<option value="saab">Saab</option>
+										<option value="fiat">Fiat</option>
+										<option value="audi">Audi</option>
+									</select>
+								</div>
+								<div class="item">
+									<ul>
+										<li><input type="checkbox">choose 1</li>
+										<li><input type="checkbox">choose 2</li>
+										<li><input type="checkbox">choose 3</li>
+										<li><input type="checkbox">choose 4</li>
+									</ul>
+								</div>
+								<div class="item">
+									<input type="text"> Enter text to find 
+									<button>Search</button>
+								</div>
+							  </li>
+							</ul>
+						</div>
+						<div class="div-result">
+							<p>Total: <span>2</span></p>
+							<ul class="result">
+							  <li>
+								<div class="item">No.</div>
+								<div class="item">Title 1</div>
+								<div class="item">Title 2</div>
+								<div class="item">Title 3</div>
+								<div class="item">Title 4</div>
+								<div class="item">Title 5</div>
+								<div class="item">Title 6</div>
+								<div class="item">Title 7</div>
+								<div class="item">Title 8</div>
+								<div class="item">Title 9</div>
+							  </li>
+							  <li>
+								<div class="item">1</div>
+								<div class="item">content 1</div>
+								<div class="item">content 2</div>
+								<div class="item">content 3</div>
+								<div class="item">content 4</div>
+								<div class="item">content 5</div>
+								<div class="item">content 6</div>
+								<div class="item">content 7</div>
+								<div class="item"><button>Button</button></div>
+								<div class="item"><button>Button</button></div>
+							  </li>
+						 	  <li>
+								<div class="item">2</div>
+								<div class="item">content 1</div>
+								<div class="item">content 2</div>
+								<div class="item">content 3</div>
+								<div class="item">content 4</div>
+								<div class="item">content 5</div>
+								<div class="item">content 6</div>
+								<div class="item">content 7</div>
+								<div class="item"><button>Button</button></div>
+								<div class="item"><button>Button</button></div>
+							  </li>
+							</ul>
+						</div>
+						<div class="pagination">
+						  <a href="#">&laquo;</a>
+						  <a class="active" href="#">1</a>
+						  <a href="#">&raquo;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 </body>
 </html>
