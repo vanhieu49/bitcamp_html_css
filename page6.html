@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Page 6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+      }
+      /* top header */
+      .top__header {
+        width: 95%;
+        margin: 20px auto;
+      }
+      .top__header ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+      }
+      .top__header ul li {
+        padding-left: 5px;
+        font-weight: 500;
+      }
+      .top__header ul li:nth-child(3) {
+        color: red;
+      }
+      .top__header ul li:not(:last-child) {
+        margin-right: 80px;
+      }
+      /* top header line */
+      .top__header-line {
+        
+        display: flex;
+        justify-content: space-between;
+      }
+      .top__header-line .top__header-line-left {
+        border: 1px solid rgb(158, 153, 153);
+        width: 1%;
+      }
+      .top__header-line .top__header-line-right {
+        border: 1px solid rgb(158, 153, 153);
+        width: 60%;
+      }
+
+      /* title header */
+      .title__header {
+        width: 90%;
+        margin: 10px auto;
+      }
+      .title__header ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+      }
+      .title__header ul li {
+        padding-left: 15px;
+        font-weight: 700;
+      }
+      /* menu */
+      nav {
+        background-color: rgb(38, 15, 141);
+        color: white;
+        box-sizing: border-box;
+      }
+      nav .menu {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        box-sizing: border-box;
+      }
+      .menu .menu__icon {
+        padding: 5px 15px 5px;
+        border-left: 2px solid rgb(180, 170, 170);
+        border-right: 2px solid rgb(180, 170, 170);
+      }
+      .menu ul {
+        display: flex;
+        list-style: none;
+      }
+      .menu ul li {
+        display: flex;
+        padding: 5px;
+        margin-left: 10px;
+        border-right: 2px solid rgb(180, 170, 170);
+      }
+      .circlIcon {
+        position: relative;
+        border: 1px solid rgb(180, 176, 176);
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        margin-left: 200px;
+      }
+      .menu ul li i {
+        position: absolute;
+        top: 10%;
+        left: 14%;
+      }
+      /* container */
+      .container {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 2%;
+      }
+      /* banner */
+      .container .container__banner {
+        background-image: url("./imgs/banner-p6.png");
+        background-repeat: repeat;
+        background-position: center;
+        background-size: contain;
+        height: 50%;
+        margin-bottom: 2%;
+        text-align: center;
+        box-sizing: border-box;
+        color: white;
+        padding: 2%;
+      }
+      .container .container__banner h3 {
+        font-size: 21px;
+      }
+      .container .container__banner hr {
+        border: 1px solid rgba(236, 234, 234, 0.3);
+        width: 95%;
+        margin: 3px auto;
+      }
+      .container .container__banner p {
+        font-size: 14px;
+        color: rgb(224, 228, 217);
+      }
+
+      /* content title */
+      .container .container__content-title {
+        margin: 30px auto;
+        text-align: center;
+      }
+      .container .container__content-title h3 {
+        font-size: 21px;
+      }
+      .container .container__content-title i {
+        margin: 15px 0;
+      }
+      /* content container */
+      .container .container__content {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 30px;
+      }
+      .container .container__content .container__content-image {
+        background-color: rgb(13, 67, 148);
+        height: 164px;
+        width: 240px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 30px;
+        border-radius: 90%;
+        position: relative;
+      }
+      .container .container__content .container__content-image h5{
+        color: white;
+      }
+      .container
+        .container__content
+        .container__content-image
+        .content-image__item {
+        background-color: rgb(226, 230, 236);
+        height: 100px;
+        width: 220px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 30px;
+        border-radius: 50% / 0 0 100% 100%;        
+        position: absolute;
+        top: 60px;
+        left: 10px;
+      }
+      .triangle {
+        height: 0;
+        width: 0;
+        border-left: 10px solid #0c08eb;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        position: absolute;
+        top: 70px;
+        left: 270px;
+      }
+      .container
+        .container__content
+        .container__content-image
+        .content-image__item
+        p:first-child {
+        font-size: 18px;
+      }
+      .container
+        .container__content
+        .container__content-image
+        .content-image__item
+        p:last-child {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top__header">
+        <ul>
+          <li>Top one</li>
+          <li>Top Two</li>
+          <li>Top Three</li>
+          <li>Top Four</li>
+        </ul>
+      </div>
+      <div class="top__header-line">
+        <div class="top__header-line-left"></div>
+        <div class="top__header-line-right"></div>
+      </div>
+      <div class="title__header">
+        <ul>
+          <li>center top one</li>
+          <li>center top two</li>
+          <li>center top three</li>
+          <li>center top four</li>
+          <li>center top five</li>
+          <li>center top six</li>
+        </ul>
+      </div>
+      <nav>
+        <div class="menu">
+          <div class="menu__icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <ul>
+            <li>
+              menu one
+              <div class="circlIcon"><i class="fas fa-chevron-down"></i></div>
+            </li>
+            <li>
+              menu two
+              <div class="circlIcon"><i class="fas fa-chevron-down"></i></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="container__banner">
+        <h3>Getting your first presentation slide right</h3>
+        <hr />
+        <p>
+          Always alter your presentation openings, depending on your audience.
+        </p>
+      </div>
+      <div class="container__content-title">
+        <h3>Getting your first</h3>
+        <i class="fas fa-pen"></i>
+      </div>
+      <!-- list grid -->
+      <div class="container__content">
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>01</h5>
+          <div class="content-image__item">
+            <p>Title content item 1</p>
+            <p>content container of item 1</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>02</h5>
+          <div class="content-image__item">
+            <p>Title content item 2</p>
+            <p>content container of item 2</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>03</h5>
+          <div class="content-image__item">
+            <p>Title content item 3</p>
+            <p>content container of item 3</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>04</h5>
+          <div class="content-image__item">
+            <p>Title content item 4</p>
+            <p>content container of item 4</p>
+          </div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>05</h5>
+          <div class="content-image__item">
+            <p>Title content item 5</p>
+            <p>content container of item 5</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>06</h5>
+          <div class="content-image__item">
+            <p>Title content item 6</p>
+            <p>content container of item 6</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>07</h5>
+          <div class="content-image__item">
+            <p>Title content item 7</p>
+            <p>content container of item 7</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <!-- item grid -->
+        <div class="container__content-image">
+          <h5>08</h5>
+          <div class="content-image__item">
+            <p>Title content item 8</p>
+            <p>content container of item 8</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
