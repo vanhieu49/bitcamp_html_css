@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Page 31 - 1</title>
+    <style>
+		:root{
+			--blue:#313bc5;
+			--bluenhac:#4f82dc;
+			--xamnhac:#f4f4f4;
+			--xamvua:#f8f8f8;
+			--xamdam:#ddd;
+			--white:#ffffff;
+			
+		}
+/*reset CSS-------------------------------------------*/
+		* {
+			box-sizing: border-box;
+		}
+		body,h1,h2,h3,h4,ul,li,p{
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+
+
+/*main right content----------------------------------------------------*/
+	
+		.main-content .div-right .right-content{
+			padding: 5px 5px 5px;
+		}
+/*main right content nav-bar ----------------------------------------------------*/
+		/* .right-content .nav-bar{
+			display: grid;
+    		grid-template-columns: 50% 50%;
+			padding: 5px 5px 10px 5px;
+		} */
+		/* .right-content .nav-bar h3{
+			display: inline-block;
+		}
+		 */
+/*main right content div-filter ----------------------------------------------------*/
+
+		.div-filter .filter {
+			display: grid;
+			grid-template-columns: 2fr 8fr;
+			border-top: 1px solid var(--xamdam);
+		}
+		.filter:nth-child(2) {
+			margin-top: 5px;
+		}
+		.filter .items{
+			display: grid;
+		}
+		.filter .items .item {
+			border-right: 1px solid var(--xamdam);
+			border-bottom: 1px solid var(--xamdam);
+			padding: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	
+		.filter>.items:first-child {
+			background-color: var(--xamvua);
+		}
+		.filter>.items:first-child .item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-overflow: initial;
+			overflow: auto;
+			white-space: normal;
+			border-left: 1px solid var(--xamdam);
+		}
+		.filter>.items:nth-child(2) .item-container {
+			display: grid;
+			grid-template-columns: 3fr 2fr 3fr;
+		}
+		.filter>.items:nth-child(2) .item-container .item:nth-child(2) {
+			text-align: center;
+			background-color: var(--xamvua);
+		}
+
+		.filter .items .item ul li{
+			display: inline-block
+		}
+		
+/*main right content div-result ----------------------------------------------------*/
+		.right-content .div-result{
+			margin-top: 10px;
+		}
+		.div-result .result {
+			margin-top: 10px;
+			border-left: 1px solid var(--xamdam);
+			border-top: 1px solid var(--xamdam);
+		}
+		.result .items{
+			display: grid;
+			grid-template-columns: 5% 20fr 5fr 5fr 5fr;
+			text-align: center;
+    	}
+		.result .items:hover{
+			background-color: #4CAF50;
+    	}
+
+		/* title result */
+		.result>.items:first-child {
+			background-color: var(--xamvua);
+		}
+		.result>.items:first-child .item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-overflow: initial;
+			overflow: auto;
+			white-space: normal;
+		}
+		.result .items .item {
+			border-right: 1px solid var(--xamdam);
+			border-bottom: 1px solid var(--xamdam);
+			padding: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		
+
+/*main right content pagination---------------- */
+		.pagination {
+		  margin-top: 10px;
+		  display: flex;
+		  justify-content: center;
+		}
+		.pagination a {
+		  color: black;
+		  float: left;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+		.pagination a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		.pagination a:hover:not(.active) {
+			background-color: #ddd;
+		}
+    </style>
+</head>
+<body>
+		<div class="main">
+			<div class="main-content">
+				<div class="div-right">
+					<div class="right-content">
+						<div class="nav-bar">
+							<h3>Title</h3>
+						</div>
+						<div class="div-filter">
+							<ul class="filter">
+							  <li class="items">
+								<div class="item">Title 3</div>
+								<div class="item">Title 4</div>
+							  </li>
+							  <li class="items">
+								<div class="item">
+									<ul>
+										<li><input type="radio">choose 1</li>
+										<li><input type="radio">choose 2</li>
+										<li><input type="radio">choose 3</li>
+										<li><input type="radio">choose 4</li>
+									</ul>
+								</div>
+								<div class="item">
+                                    <select id="select3" name="car">
+										<option value="volvo">Select 3</option>
+										<option value="saab">Saab</option>
+										<option value="fiat">Fiat</option>
+										<option value="audi">Audi</option>
+									</select>
+									<input type="text">
+									<button>Search &rang;</button>
+								</div>
+							  </li>
+							</ul>
+						</div>
+						<div class="div-result">
+							<p>Total: <span>2</span></p>
+							<ul class="result">
+							  <li class="items">
+								<div class="item">No.</div>
+								<div class="item">Title 1</div>
+								<div class="item">Title 2</div>
+								<div class="item">Title 3</div>
+								<div class="item">Title 4</div>
+							  </li>
+							  <li class="items">
+								<div class="item">1</div>
+								<div class="item">content 1</div>
+								<div class="item">content 2</div>
+								<div class="item">content 3</div>
+								<div class="item">content 4</div>
+							  </li>
+						 	  <li class="items">
+								<div class="item">2</div>
+								<div class="item">content 1</div>
+								<div class="item">content 2</div>
+								<div class="item">content 3</div>
+								<div class="item">content 4</div>
+							  </li>
+							</ul>
+						</div>
+						<div class="pagination">
+						  <a href="#">&laquo;</a>
+						  <a class="active" href="#">1</a>
+						  <a href="#">&raquo;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+</body>
+</html>
